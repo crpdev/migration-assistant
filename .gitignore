@@ -1,6 +1,7 @@
 # Environment variables
 .env
-.env.*
+.env.local
+.env.*.local
 !.env.example
 
 # Python
@@ -154,4 +155,7 @@ wheels/
 # Local development
 local_settings.py
 db.sqlite3
-db.sqlite3-journal 
+db.sqlite3-journal
+
+# Draw.io backup files
+.$*.drawio.bkp 

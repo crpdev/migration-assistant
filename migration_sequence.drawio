@@ -1,243 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" modified="2024-03-19T10:00:00.000Z" agent="Mozilla/5.0" version="21.1.9" type="device">
   <diagram id="migration-sequence" name="Migration Process Sequence">
-    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
         
-        <!-- Actors -->
-        <mxCell id="2" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="40" width="30" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="3" value="Migration&#xa;Orchestrator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="240" y="40" width="120" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="4" value="MCP File&#xa;Explorer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="40" width="120" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="5" value="MCP File&#xa;Parser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="640" y="40" width="120" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="6" value="MCP Maven&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="840" y="40" width="120" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="7" value="Gemini&#xa;LLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="40" width="120" height="60" as="geometry"/>
+        <!-- Title -->
+        <mxCell id="title" value="Java Migration Process Sequence" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="40" width="1070" height="30" as="geometry"/>
         </mxCell>
 
-        <!-- Project Exploration -->
-        <mxCell id="8" value="1. Project Exploration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="120" width="1070" height="30" as="geometry"/>
+        <!-- Swimlanes -->
+        <mxCell id="swimlane1" value="User Interaction" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="90" y="100" width="1070" height="120" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="Start Migration" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+        <mxCell id="swimlane2" value="Analysis Phase" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="240" width="1070" height="300" as="geometry"/>
+        </mxCell>
+        <mxCell id="swimlane3" value="Migration Phase" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="90" y="560" width="1070" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="swimlane4" value="Verification Phase" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="90" y="700" width="1070" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Actors -->
+        <mxCell id="user" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="140" width="30" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="orchestrator" value="Migration&#xa;Orchestrator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="file_explorer" value="MCP File&#xa;Explorer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="file_parser" value="MCP File&#xa;Parser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="maven" value="MCP Maven&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="llm" value="Gemini&#xa;LLM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Process Flow -->
+        <!-- Initial Analysis -->
+        <mxCell id="start" value="Start Migration" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Project Structure Analysis -->
+        <mxCell id="arrow1" value="Request Project&#xa;Structure" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="explore">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="10" value="Analyze Project Structure" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="4">
-          <mxGeometry width="160" relative="1" as="geometry"/>
+        <mxCell id="explore" value="Explore Project&#xa;Structure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="280" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="11" value="Return Project Structure" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="3">
+        <mxCell id="arrow1_return" value="Return Project&#xa;Structure" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="explore" target="start">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
         <!-- POM Analysis -->
-        <mxCell id="12" value="2. POM Analysis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="180" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="13" value="Parse POM" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+        <mxCell id="arrow2" value="Request POM&#xa;Analysis" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="pom">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="14" value="Return POM Analysis" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="3">
-          <mxGeometry width="160" relative="1" as="geometry"/>
+        <mxCell id="pom" value="Analyze POM&#xa;Dependencies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="120" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Spring Boot Verification -->
-        <mxCell id="15" value="3. Spring Boot Verification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="240" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="16" value="Check Spring Boot" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
-          <mxGeometry width="160" relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="17" value="Return Spring Boot Info" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
+        <mxCell id="arrow2_return" value="Return POM&#xa;Analysis" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="pom" target="start">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- Initial Compilation -->
-        <mxCell id="18" value="4. Initial Compilation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="300" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="19" value="Compile Project" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
+        <!-- Migration Tools Analysis -->
+        <mxCell id="arrow_tools" value="Request Migration&#xa;Tools Analysis" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="tools_analyze">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="20" value="Return Compilation Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
-          <mxGeometry width="160" relative="1" as="geometry"/>
+        <mxCell id="tools_analyze" value="Analyze with&#xa;Migration Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="480" width="120" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Test Execution -->
-        <mxCell id="21" value="5. Test Execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="360" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="22" value="Run Tests" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
-          <mxGeometry width="160" relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="23" value="Return Test Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
+        <mxCell id="arrow_tools_return" value="Return Migration&#xa;Tools Analysis" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="tools_analyze" target="start">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- Migration Path Determination -->
-        <mxCell id="24" value="6. Migration Path Determination" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="420" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="25" value="Determine Migration Path" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+        <!-- LLM Analysis -->
+        <mxCell id="arrow3" value="Request Migration&#xa;Path Analysis" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="analyze">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="26" value="Return Migration Path" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="3">
+        <mxCell id="analyze" value="Analyze Migration&#xa;Path" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="380" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3_return" value="Return Migration&#xa;Path" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analyze" target="start">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- User Confirmation for Migration Path -->
-        <mxCell id="39" value="Show Migration Path" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+        <!-- Analysis Complete -->
+        <mxCell id="analysis_complete" value="Analysis&#xa;Complete" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="580" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow_analysis_complete" value="" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="analysis_complete">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="40" value="Confirm Migration Path" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+
+        <!-- User Confirmation -->
+        <mxCell id="arrow4" value="Show Migration&#xa;Path" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="user">
+          <mxGeometry width="160" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="confirm" value="User Confirms&#xa;Migration Path" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="90" y="580" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow4_return" value="Confirmation" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="confirm" target="analysis_complete">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
         <!-- Migration Execution -->
-        <mxCell id="27" value="7. Migration Execution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="480" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="28" value="Execute Migration" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
+        <mxCell id="arrow5" value="Execute Migration" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="maven">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="29" value="Return Migration Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
-          <mxGeometry width="160" relative="1" as="geometry"/>
+        <mxCell id="execute" value="Execute&#xa;Migration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="800" y="580" width="120" height="60" as="geometry"/>
         </mxCell>
-
-        <!-- Post-migration Verification -->
-        <mxCell id="30" value="8. Post-migration Verification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="540" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="31" value="Verify Changes" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
-          <mxGeometry width="160" relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="32" value="Return Verification Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="6" target="3">
+        <mxCell id="arrow5_return" value="Migration&#xa;Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="execute" target="analysis_complete">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- User Confirmation for Changes -->
-        <mxCell id="41" value="Show Changes" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+        <!-- Migration Tools Execution -->
+        <mxCell id="arrow_tools_execute" value="Execute with&#xa;Migration Tools" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="tools_execute">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="42" value="Confirm Changes" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+        <mxCell id="tools_execute" value="Execute with&#xa;Migration Tools" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="400" y="580" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow_tools_execute_return" value="Migration Tools&#xa;Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="tools_execute" target="analysis_complete">
+          <mxGeometry width="160" relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Verification -->
+        <mxCell id="arrow6" value="Verify Changes" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="file_parser">
+          <mxGeometry width="160" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="verify" value="Verify Changes&#xa;and Tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="720" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow6_return" value="Verification&#xa;Results" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="verify" target="analysis_complete">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
         <!-- Report Generation -->
-        <mxCell id="33" value="9. Report Generation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="90" y="600" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="34" value="Generate Report" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+        <mxCell id="arrow7" value="Generate Report" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="file_explorer">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="35" value="Return Report" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7" target="3">
-          <mxGeometry width="160" relative="1" as="geometry"/>
+        <mxCell id="report" value="Generate&#xa;Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="720" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="36" value="Show Report" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+        <mxCell id="arrow7_return" value="Migration&#xa;Report" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="report" target="analysis_complete">
           <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- User Prompt Boxes -->
-        <mxCell id="43" value="User Prompts" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="90" y="680" width="1070" height="120" as="geometry"/>
+        <!-- End -->
+        <mxCell id="arrow8" value="Complete" style="endArrow=block;endSize=12;endFill=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="analysis_complete" target="end">
+          <mxGeometry width="160" relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="44" value="1. Initial Migration Confirmation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="43">
-          <mxGeometry y="30" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="45" value="2. Migration Path Review and Confirmation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="43">
-          <mxGeometry y="60" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="46" value="3. Changes Review and Confirmation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="43">
-          <mxGeometry y="90" width="1070" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- LLM Interaction Box -->
-        <mxCell id="47" value="LLM Interactions" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="90" y="820" width="1070" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="48" value="1. Migration Path Analysis and Recommendations" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="47">
-          <mxGeometry y="30" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="49" value="2. Code Change Suggestions and Validation" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="47">
-          <mxGeometry y="60" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="50" value="3. Report Generation and Summary" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="47">
-          <mxGeometry y="90" width="1070" height="30" as="geometry"/>
+        <mxCell id="end" value="End Migration" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="720" width="120" height="60" as="geometry"/>
         </mxCell>
 
         <!-- Legend -->
-        <mxCell id="51" value="Legend" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="90" y="960" width="1070" height="180" as="geometry"/>
+        <mxCell id="legend" value="Legend" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="90" y="860" width="1070" height="180" as="geometry"/>
         </mxCell>
-        <mxCell id="52" value="Process Steps" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="51">
+        <mxCell id="legend1" value="Process Steps" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="legend">
           <mxGeometry y="30" width="1070" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="53" value="1. Project Exploration: Analyze project structure and identify key files" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="51">
+        <mxCell id="legend2" value="1. Initial Analysis: Project structure and dependencies" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="legend">
           <mxGeometry y="60" width="1070" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="54" value="2. POM Analysis: Parse dependencies and properties" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="51">
+        <mxCell id="legend3" value="2. Migration Execution: Apply changes and verify" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="legend">
           <mxGeometry y="90" width="1070" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="55" value="3. Spring Boot Verification: Check version and compatibility" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="51">
+        <mxCell id="legend4" value="3. Report Generation: Summarize changes and results" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="legend">
           <mxGeometry y="120" width="1070" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="56" value="4. Initial Compilation: Verify project compiles" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="51">
+        <mxCell id="legend5" value="4. User Interaction: Confirm and validate changes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="legend">
           <mxGeometry y="150" width="1070" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- Multi-turn LLM Interactions -->
-        <mxCell id="57" value="Multi-turn LLM Interactions" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="90" y="1160" width="1070" height="180" as="geometry"/>
-        </mxCell>
-        <mxCell id="58" value="Migration Path Analysis" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="57">
-          <mxGeometry y="30" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="59" value="1. Initial Analysis: Review project structure and dependencies" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="57">
-          <mxGeometry y="60" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="60" value="2. Path Refinement: Use compilation and test results to adjust path" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="57">
-          <mxGeometry y="90" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="61" value="3. Final Validation: Verify changes against initial analysis" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="57">
-          <mxGeometry y="120" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="62" value="4. Report Generation: Summarize all steps and changes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="57">
-          <mxGeometry y="150" width="1070" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- User Interaction Points -->
-        <mxCell id="63" value="User Interaction Points" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="90" y="1360" width="1070" height="120" as="geometry"/>
-        </mxCell>
-        <mxCell id="64" value="1. Initial Migration Confirmation: Approve project analysis and migration plan" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="63">
-          <mxGeometry y="30" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="65" value="2. Migration Path Review: Review and approve suggested changes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="63">
-          <mxGeometry y="60" width="1070" height="30" as="geometry"/>
-        </mxCell>
-        <mxCell id="66" value="3. Changes Review: Verify and approve implemented changes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="63">
-          <mxGeometry y="90" width="1070" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- Multi-turn Flow Indicators -->
-        <mxCell id="67" value="Multi-turn Flow" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=0;strokeColor=#9673a6;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="420" width="20" height="180" as="geometry"/>
-        </mxCell>
-        <mxCell id="68" value="LLM Learning from Previous Steps" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;rotation=-90;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="480" width="120" height="60" as="geometry"/>
         </mxCell>
 
       </root>
     </mxGraphModel>
   </diagram>
 </mxfile> 
+
+
+
